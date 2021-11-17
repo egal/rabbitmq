@@ -1,5 +1,5 @@
 <p align="center"><img src="https://raw.githubusercontent.com/egal/art/main/logo.svg" height="150"></p>
-<h1 align="center">Egal | Name</h1>
+<h1 align="center">Egal | RabbitMq</h1>
 <!-- Badges -->
 <p align="center">
  <a href="https://packagist.org/packages/egal/framework"><img src="https://poser.pugx.org/egal/framework/v"></a>
@@ -43,6 +43,7 @@
 | [Auth Service]               |               [![Auth Service Status]][Auth Service Status URL]               | Сервис Egal экосистемы, реализующий базовые функции авторизации                |
 | [Interface Service]          |          [![Interface Service Status]][Interface Service Status URL]          | Сервис Egal экосистемы, предназначенный для управления метаданными интерфейсов |
 | [Postgres]                   |                   [![Postgres Status]][Postgres Status URL]                   | Надстроенная Система управления базами данных PostgreSQL для Egal экосистемы   |
+| [RabbitMq]                   |                   [![RabbitMq Status]][RabbitMq Status URL]                   | Надстроенный брокер обмена сообщениями RabbitMq для Egal экосистемы   |
 
 [Docs]: https://github.com/egal/egal-docs
 [Egal/Framework PHP Package]: https://github.com/egal/egal-framework-php-package
@@ -52,6 +53,7 @@
 [Auth Service]:https://github.com/egal/egal-auth-service
 [Interface Service]: https://github.com/egal/egal-interface-service
 [Postgres]: https://github.com/egal/postgres
+[RabbitMq]: https://github.com/egal/rabbitmq
 
 [Docs Status]: https://img.shields.io/website?url=https%3A%2F%2Fegal.github.io%2Fegal-docs%2F%23%2F
 [Egal/Framework PHP Package Status]: https://img.shields.io/packagist/v/egal/framework?include_prereleases
