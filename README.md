@@ -2,10 +2,9 @@
 <h1 align="center">Egal | RabbitMq</h1>
 <!-- Badges -->
 <p align="center">
- <a href="https://packagist.org/packages/egal/framework"><img src="https://poser.pugx.org/egal/framework/v"></a>
- <a href="https://packagist.org/packages/egal/framework"><img src="https://poser.pugx.org/egal/framework/v/unstable"></a>
- <a href="https://packagist.org/packages/egal/framework"><img src="https://poser.pugx.org/egal/framework/downloads"></a>
- <a href="https://packagist.org/packages/egal/framework"><img src="https://poser.pugx.org/egal/framework/license"></a>
+<a href="https://github.com/egal/rabbitmq"><img src="https://img.shields.io/github/license/egal/rabbitmq"></a>
+<a href="https://hub.docker.com/r/egalbox/rabbitmq"><img src="https://img.shields.io/docker/v/egalbox/rabbitmq"></a>
+<a href="https://hub.docker.com/r/egalbox/rabbitmq"><img src="https://img.shields.io/docker/pulls/egalbox/rabbitmq"></a>
 </p>
 
 ## Новости
@@ -63,6 +62,7 @@
 [Auth Service Status]: https://img.shields.io/docker/v/egalbox/auth-service?label=dockerhub
 [Interface Service Status]: https://img.shields.io/docker/v/egalbox/interface-service?label=dockerhub
 [Postgres Status]: https://img.shields.io/docker/v/egalbox/postgres?label=dockerhub
+[RabbitMq Status]: https://img.shields.io/docker/v/egalbox/rabbitmq?label=dockerhub
 
 [Docs Status URL]: https://egal.github.io/egal-docs/
 [Egal/Framework PHP Package Status URL]: https://packagist.org/packages/egal/framework
@@ -72,5 +72,6 @@
 [Auth Service Status URL]: https://hub.docker.com/r/egalbox/auth-service
 [Interface Service Status URL]: https://hub.docker.com/r/egalbox/interface-service
 [Postgres Status URL]: https://hub.docker.com/r/egalbox/postgres
+[RabbitMq Status URL]: https://hub.docker.com/r/egalbox/rabbitmq
 
 
