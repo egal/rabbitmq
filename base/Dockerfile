@@ -1,4 +1,4 @@
-FROM rabbitmq:3.9.10
+FROM rabbitmq:3.9.7
 
 ENV RABBITMQ_USER='user'
 ENV RABBITMQ_PASSWORD='password'
