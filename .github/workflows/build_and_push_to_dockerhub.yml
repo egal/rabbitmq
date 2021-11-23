@@ -20,27 +20,16 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Prepare tags for image
         id: image-metadata
-        run: |
-          BASE_TAG="${{ secrets.DOCKERHUB_USERNAME }}/${GITHUB_REPOSITORY#*/}:${GITHUB_REF##*/v}"
-          BASE_FROM_IMAGE="rabbitmq:${GITHUB_REF##*/v}"
-          MANAGEMENT_POSTFIX='-management'
-          echo "::set-output name=tag::${BASE_TAG}"
-          echo "::set-output name=from-image::${BASE_FROM_IMAGE}"
-          echo "::set-output name=tag-management::${BASE_TAG}${MANAGEMENT_POSTFIX}"
-          echo "::set-output name=from-image-management::${BASE_FROM_IMAGE}${MANAGEMENT_POSTFIX}"
+        run: echo "::set-output name=tag::${{ secrets.DOCKERHUB_USERNAME }}/${GITHUB_REPOSITORY#*/}:${GITHUB_REF##*/v}"
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: .
+          context: ./base
           push: true
           tags: ${{ steps.image-metadata.outputs.tag }}
-          build-args: |
-            FROM_IMAGE=${{ steps.image-metadata.outputs.from-image }}
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: .
+          context: ./managment
           push: true
-          tags: ${{ steps.image-metadata.outputs.tag-management }}
-          build-args: |
-            FROM_IMAGE=${{ steps.image-metadata.outputs.from-image-management }}
+          tags: ${{ steps.image-metadata.outputs.tag }}-managment
