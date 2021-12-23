@@ -9,8 +9,7 @@ RUN for PLUGIN in $(echo "${RABBITMQ_PLUGINS}" | tr ',' ' '); do rabbitmq-plugin
 ADD rabbitmq.config /etc/rabbitmq/
 ADD definitions.json /etc/rabbitmq/
 
-RUN sed -i "s/RABBITMQ_PASSWORD/${RABBITMQ_PASSWORD}/g" /etc/rabbitmq/definitions.json
-RUN sed -i "s/RABBITMQ_USER/${RABBITMQ_USER}/g" /etc/rabbitmq/definitions.json
-
-RUN chown rabbitmq:rabbitmq /etc/rabbitmq/rabbitmq.config /etc/rabbitmq/definitions.json
-CMD ["rabbitmq-server"]
+CMD sed -i "s/RABBITMQ_PASSWORD/${RABBITMQ_PASSWORD}/g" /etc/rabbitmq/definitions.json; \
+    sed -i "s/RABBITMQ_USER/${RABBITMQ_USER}/g" /etc/rabbitmq/definitions.json; \
+    chown rabbitmq:rabbitmq /etc/rabbitmq/rabbitmq.config /etc/rabbitmq/definitions.json; \
+    rabbitmq-server
