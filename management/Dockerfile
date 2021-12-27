@@ -10,5 +10,5 @@ ADD definitions.json /etc/rabbitmq/
 CMD sed -i "s/RABBITMQ_PASSWORD/${RABBITMQ_PASSWORD}/g" /etc/rabbitmq/definitions.json; \
     sed -i "s/RABBITMQ_USER/${RABBITMQ_USER}/g" /etc/rabbitmq/definitions.json; \
     chown rabbitmq:rabbitmq /etc/rabbitmq/rabbitmq.config /etc/rabbitmq/definitions.json; \
-    for PLUGIN in $(echo "${RABBITMQ_PLUGINS}" | tr ',' ' '); do rabbitmq-plugins enable "${PLUGIN}"; done \
+    for PLUGIN in $(echo "${RABBITMQ_PLUGINS}" | tr ',' ' '); do rabbitmq-plugins enable "${PLUGIN}"; done; \
     rabbitmq-server
