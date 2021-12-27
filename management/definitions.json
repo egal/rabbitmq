@@ -15,7 +15,7 @@
   ],
   "permissions": [
     {
-      "user": "user",
+      "user": "RABBITMQ_USER",
       "vhost": "/",
       "configure": ".*",
       "write": ".*",
